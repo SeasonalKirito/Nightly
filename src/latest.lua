@@ -35,7 +35,7 @@ function Script.Functions.CreateClientInfo(Location)
     local UIListLayout = Instance.new("UIListLayout")
     UIListLayout.Parent = Frame
     UIListLayout.FillDirection = Enum.FillDirection.Horizontal
-    UIListLayout.HorizontalAlignment = Enum.HorizontalAlignment.Center
+    UIListLayout.HorizontalAlignment = Enum.HorizontalAlignment.Left
     UIListLayout.VerticalAlignment = Enum.VerticalAlignment.Center
     UIListLayout.SortOrder = Enum.SortOrder.LayoutOrder
     UIListLayout.Padding = UDim.new(0, 12)
@@ -43,6 +43,25 @@ function Script.Functions.CreateClientInfo(Location)
     local UICorner = Instance.new("UICorner")
     UICorner.Parent = Frame
     UICorner.CornerRadius = UDim.new(0, 10)
+
+    local UIPadding = Instance.new("UIPadding")
+    UIPadding.Parent = Frame
+    UIPadding.PaddingLeft = UDim.new(0, 20)
+    UIPadding.PaddingRight = UDim.new(0, 20)
+
+    local TextLabel = Instance.new("TextLabel")
+    TextLabel.Name = "PlaceID"
+    TextLabel.Parent = Frame
+    TextLabel.Size = UDim2.new(0, 225, 1, 0)
+    TextLabel.Position = UDim2.new(0.5, -100, 0.5, -40) -- Center the label within the frame
+    TextLabel.AnchorPoint = Vector2.new(0.5, 0.5) -- Set the anchor point to the center
+    TextLabel.BackgroundTransparency = 1
+    TextLabel.Text = "PlaceID: " .. tostring(game.PlaceId)
+    TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+    TextLabel.TextScaled = false
+    TextLabel.TextSize = 14
+    TextLabel.TextXAlignment = Enum.TextXAlignment.Center
+    TextLabel.Font = Enum.Font.Code -- RobotoMono
 
     return Frame
 end
