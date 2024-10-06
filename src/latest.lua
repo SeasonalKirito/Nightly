@@ -52,7 +52,7 @@ function Script.Functions.CreateClientInfo(Location)
     local TextLabel = Instance.new("TextLabel")
     TextLabel.Name = "PlaceID"
     TextLabel.Parent = Frame
-    TextLabel.Size = UDim2.new(0, 225, 1, 0)
+    TextLabel.Size = UDim2.new(0, 250, 1, 0)
     TextLabel.Position = UDim2.new(0.5, -100, 0.5, -40) -- Center the label within the frame
     TextLabel.AnchorPoint = Vector2.new(0.5, 0.5) -- Set the anchor point to the center
     TextLabel.BackgroundTransparency = 1
